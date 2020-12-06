@@ -11,51 +11,51 @@
 
 <body>
     <div class="container">
-
         <div class="calculadora">
-
-            <div class="display">
+            <div class="display" id="display">
                 0
             </div>
 
             <div>
 
                 <div class="linha">
-                    <div class="tecla">7</div>
-                    <div class="tecla">8</div>
-                    <div class="tecla">9</div>
-                    <div class="tecla">/</div>
-                    <div class="tecla">c</div>
+                    <div class="tecla" onclick="pegarValorTecla('7')">7</div>
+                    <div class="tecla" onclick="pegarValorTecla('8')">8</div>
+                    <div class="tecla" onclick="pegarValorTecla('9')">9</div>
+                    <div class="tecla" onclick="pegarValorTecla('/')">/</div>
+                    <div class="tecla" onclick="pegarValorTecla('C')">c</div>
                 </div>
 
                 <div class="linha">
-                    <div class="tecla">4</div>
-                    <div class="tecla">5</div>
-                    <div class="tecla">6</div>
-                    <div class="tecla">*</div>
-                    <div class="tecla">%</div>
+                    <div class="tecla" onclick="pegarValorTecla('4')">4</div>
+                    <div class="tecla" onclick="pegarValorTecla('5')">5</div>
+                    <div class="tecla" onclick="pegarValorTecla('6')">6</div>
+                    <div class="tecla" onclick="pegarValorTecla('*')">*</div>
+                    <div class="tecla" onclick="pegarValorTecla('%')">%</div>
                 </div>
 
                 <div class="linha">
-                    <div class="tecla">1</div>
-                    <div class="tecla">2</div>
-                    <div class="tecla">3</div>
-                    <div class="tecla">-</div>
-                    <div class="tecla igual">=</div>
+                    <div class="tecla" onclick="pegarValorTecla('1')">1</div>
+                    <div class="tecla" onclick="pegarValorTecla('2')">2</div>
+                    <div class="tecla" onclick="pegarValorTecla('3')">3</div>
+                    <div class="tecla" onclick="pegarValorTecla('-')">-</div>
+                    <div class="tecla igual" onclick="pegarValorTecla('=')">=</div>
                 </div>
 
                 <div class="linha">
-                    <div class="tecla zero">0</div>
-                    <div class="tecla">,</div>
-                    <div class="tecla">+</div>
+                    <div class="tecla zero" onclick="pegarValorTecla('0')">0</div>
+                    <div class="tecla" onclick="pegarValorTecla(',')">,</div>
+                    <div class="tecla" onclick="pegarValorTecla('+')">+</div>
                 </div>
 
             </div>
+            <!-- fecha calculadora -->
         </div>
-
+        <!-- fecha container -->
     </div>
 
-
+    <!-- Inclui o arquivo de som -->
+    <audio src="sfx/blip.ogg" id="blip"></audio>
 
     <!-- Inclui o arquivo JS  -->
     <script src="js/scripts.js"></script>
