@@ -22,31 +22,43 @@
                     <div class="tecla" onclick="pegarValorTecla('7')">7</div>
                     <div class="tecla" onclick="pegarValorTecla('8')">8</div>
                     <div class="tecla" onclick="pegarValorTecla('9')">9</div>
-                    <div class="tecla" onclick="pegarValorTecla('/')">/</div>
-                    <div class="tecla" onclick="pegarValorTecla('C')">c</div>
+                    <div class="tecla" onclick="pegarOperador('/')">/</div>
+                    <div class="tecla" onclick="limpar()">C</div>
                 </div>
 
                 <div class="linha">
                     <div class="tecla" onclick="pegarValorTecla('4')">4</div>
                     <div class="tecla" onclick="pegarValorTecla('5')">5</div>
                     <div class="tecla" onclick="pegarValorTecla('6')">6</div>
-                    <div class="tecla" onclick="pegarValorTecla('*')">*</div>
-                    <div class="tecla" onclick="pegarValorTecla('%')">%</div>
+                    <div class="tecla" onclick="pegarOperador('*')">*</div>
+                    <div class="tecla" onclick="pegarOperador('%')">%</div>
                 </div>
 
                 <div class="linha">
                     <div class="tecla" onclick="pegarValorTecla('1')">1</div>
                     <div class="tecla" onclick="pegarValorTecla('2')">2</div>
                     <div class="tecla" onclick="pegarValorTecla('3')">3</div>
-                    <div class="tecla" onclick="pegarValorTecla('-')">-</div>
-                    <div class="tecla igual" onclick="pegarValorTecla('=')">=</div>
+                    <div class="tecla" onclick="pegarOperador('-')">-</div>
+                    <div class="tecla igual" onclick="verificarTeclaIgual('=')">=</div>
                 </div>
 
                 <div class="linha">
                     <div class="tecla zero" onclick="pegarValorTecla('0')">0</div>
                     <div class="tecla" onclick="pegarValorTecla(',')">,</div>
-                    <div class="tecla" onclick="pegarValorTecla('+')">+</div>
+                    <div class="tecla" onclick="pegarOperador('+')">+</div>
                 </div>
+
+                <!-- Exemplo de estrutura condicional IF ELSE (SE SENÃO) -->
+                <!-- <h3>Verificar Idade</h3>
+
+                <p>
+                    <label>Idade</label>
+                    <input type="number" id="idade">
+                </p>
+
+                <p>
+                    <button onclick="verificarIdade()">Verificar</button>
+                </p> -->
 
             </div>
             <!-- fecha calculadora -->
