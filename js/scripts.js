@@ -85,11 +85,9 @@ function calcular() {
     // Limpa o conteúdo das variáveis e atualiza o display
     limpar()
     console.log("Valor do resultado: " + resultado);
-    //resultado = resultado.toFixed(2);
-    //atualizarDisplay(resultado)
-    //atualizarDisplay(resultado.toFixed(2))
-    atualizarDisplay(resultado.toString());
-    //atualizarDisplay("" + resultado); // Usando uma Gambiarra
+    atualizarDisplay(resultado.toFixed(2))
+        // atualizarDisplay(resultado.toString());
+        //atualizarDisplay("" + resultado); // Usando uma Gambiarra
 }
 
 // Tecla Igual
