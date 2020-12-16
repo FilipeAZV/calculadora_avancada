@@ -1,4 +1,3 @@
-// Váriaveis de escupo global
 // Variáveis de Escopo Global
 var num1 = "";
 var num2 = "";
@@ -11,15 +10,17 @@ function pegarValorTecla(valor) {
 
     // Verifica se o Operador tem valor
     if (operador == "") {
+        console.log("1.1 IF: operador vazio");
+
         num1 = num1 + valor;
         //num1 += valor; // o mesmo que o de cima
         atualizarDisplay(num1);
-        console.log("1.1 IF: operador vazio");
-
+    
     } else {
+        console.log("1.2 ELSE: operador atribuído");
+
         num2 = num2 + valor;
         atualizarDisplay(num2);
-        console.log("1.2 ELSE: operador atribuído");
     }
 }
 
@@ -34,10 +35,11 @@ function pegarOperador(sinal) {
 
         // Se o segundo valor NÃO foi informado
         if (num2 == "") {
+            console.log("2.1.1. IF: num2 em branco");
+            
             operador = sinal;
             atualizarDisplay(num1 + sinal);
-            console.log("2.1.1. IF: num2 em branco");
-
+        
         } else {
             console.log("2.1.2. ELSE: calcular");
 
@@ -47,6 +49,15 @@ function pegarOperador(sinal) {
     } else {
         console.log("2.2. ELSE: num1 em branco");
     }
+}
+
+function pegarPercentual() {
+    console.log("5. pegarPercentual");
+
+    // Calcula a porcentagem
+    num2 = num1 / 100 * num2;
+    num2 = num2.toString();
+    calcular();
 }
 
 function calcular() {
@@ -68,26 +79,30 @@ function calcular() {
     // Verifica o Sinal informado
     if (operador == "+") {
         resultado = num1 + num2;
-
+    
     } else if (operador == "-") {
         resultado = num1 - num2;
-
+    
     } else if (operador == "*") {
         resultado = num1 * num2;
-
+    
     } else if (operador == "/") {
         resultado = num1 / num2;
-
-    } else if (operador == "%") {
-        //resultado = num1 - num2;
     }
 
+    //return resultado;
+
     // Limpa o conteúdo das variáveis e atualiza o display
-    limpar()
-    console.log("Valor do resultado: " + resultado);
-    atualizarDisplay(resultado.toFixed(2))
-        // atualizarDisplay(resultado.toString());
-        //atualizarDisplay("" + resultado); // Usando uma Gambiarra
+    limpar();
+    atualizarDisplay(resultado.toFixed(2).replace(".", ","));
+
+    //resultado = resultado.toFixed(2);
+    //atualizarDisplay(resultado)
+
+    //atualizarDisplay(resultado.toFixed(2))
+
+    //atualizarDisplay(resultado.toString());
+    //atualizarDisplay("" + resultado); // Usando uma Gambiarra
 }
 
 // Tecla Igual
@@ -123,7 +138,8 @@ function verificarTeclaIgual() {
 
 // Atualiza o Display
 function atualizarDisplay(valor) {
-    valor = valor.replace(".", ",");
+    //valor = valor.replace(".", ",");
+
     document.getElementById('display').innerHTML = valor;
 }
 
